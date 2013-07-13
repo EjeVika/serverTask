@@ -1,6 +1,7 @@
 package com.sukhorukov.khudyakova.servertask;
 
 import java.io.*;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,11 +11,33 @@ import java.io.*;
  * To change this template use File | Settings | File Templates.
  */
 public class DirectoryContentWriter {
+    public static void processDirs(File directory,String htmlFileName) throws IOException {
+        if(!directory.isDirectory()){
+            return;
+        }
+        createDirHTML(directory,htmlFileName);
+
+        for(File currentFile: directory.listFiles()){
+            processDirs(currentFile,htmlFileName);
+        }
+
+    }
     public static void createDirHTML(File directory,String htmlFileName) throws IOException {
         if(directory.isDirectory()){
             File[] dirContent = directory.listFiles();
             int numberOfFiles = dirContent.length;
-            try (OutputStream out = new FileOutputStream(htmlFileName)){
+            List<File> arrayOfFiles = new ArrayList<>();
+            List<File> arrayOfDirs = new ArrayList<>();
+            for (int i=0;i<numberOfFiles;i++){
+                if (dirContent[i].isDirectory()){
+                    arrayOfDirs.add(dirContent[i]);
+                }else{
+                    arrayOfFiles.add(dirContent[i]);
+                }
+            }
+            Collections.sort(arrayOfFiles);
+            Collections.sort(arrayOfDirs);
+            try (OutputStream out = new FileOutputStream(directory.getAbsolutePath()+File.separator+htmlFileName)){
                 PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(out)) );
 
                 writer.println("<html>");
@@ -29,20 +52,15 @@ public class DirectoryContentWriter {
                 writer.println("\t\t</tr>");
                 writer.println("\t\t<tr>");
                 writer.println("\t\t<td>" +
-                        "<a href = \""+directory.getParent()+"\">..</a></td>");
+                        "<a href = '../index.html'>..</a></td>");
                 writer.println("\t\t<td></td>");
                 writer.println("\t\t</tr>");
-                for (int i=1;i<=numberOfFiles;i++){
-                    if (dirContent[i-1].isDirectory()){
-                     //   StringBuilder htmlName = new StringBuilder();
-                     //   htmlName = htmlFileName.split(".")[0]+dirContent[i-1].toString()+".html";
 
-                        String htmlName = htmlFileName.split("\\.")[0]+dirContent[i-1].getName()+".html";
-                        System.out.println(htmlName);
-                        DirectoryContentWriter.createDirHTML(dirContent[i-1],htmlName);
+/*                for (int i=1;i<=numberOfFiles;i++){
+                    if (dirContent[i-1].isDirectory()){
                         writer.println("\t\t<tr>");
                         writer.println("\t\t<td>" +
-                                "<a href = \""+htmlName+"\">"+dirContent[i-1].getName()+"</a></td>");
+                                "<a href = \""+dirContent[i-1]+"\">"+dirContent[i-1].getName()+"</a></td>");
                         writer.println("\t\t<td></td>");
                         writer.println("\t\t</tr>");
                     }else{
@@ -52,6 +70,21 @@ public class DirectoryContentWriter {
                         writer.println("\t\t<td>"+dirContent[i-1].getUsableSpace()+"</td>");
                         writer.println("\t\t</tr>");
                     }
+                }
+*/
+                for (int i=0; i<arrayOfDirs.size();i++){
+                    writer.println("\t\t<tr>");
+                    writer.println("\t\t<td>" +
+                            "<a href = '"+arrayOfDirs.get(i).getName()+"/index.html'>"+arrayOfDirs.get(i).getName()+"</a></td>");
+                    writer.println("\t\t<td></td>");
+                    writer.println("\t\t</tr>");
+                }
+                for (int i=0; i<arrayOfFiles.size();i++){
+                    writer.println("\t\t<tr>");
+                    writer.println("\t\t<td>" +
+                            "<a href = \""+arrayOfFiles.get(i).getName()+"\">"+arrayOfFiles.get(i).getName()+"</a></td>");
+                    writer.println("\t\t<td>"+arrayOfFiles.get(i).length()+"</td>");
+                    writer.println("\t\t</tr>");
                 }
                 writer.println("\t</table>");
                 writer.println("</body>");
@@ -63,4 +96,5 @@ public class DirectoryContentWriter {
             System.out.println("this path \""+directory.getPath()+"\" doesn't point to directory" );
         }
     }
+
 }
