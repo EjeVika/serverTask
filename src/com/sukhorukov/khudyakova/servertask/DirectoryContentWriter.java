@@ -52,30 +52,18 @@ public class DirectoryContentWriter {
                 writer.println("\t\t</tr>");
                 writer.println("\t\t<tr>");
                 writer.println("\t\t<td>" +
-                        "<a href = '../index.html'>..</a></td>");
+                        "<a href = '../index.html'>..</a></td>");     // 4 recur vertion
+        //                "<a href = '..'>..</a></td>");
                 writer.println("\t\t<td></td>");
                 writer.println("\t\t</tr>");
 
-/*                for (int i=1;i<=numberOfFiles;i++){
-                    if (dirContent[i-1].isDirectory()){
-                        writer.println("\t\t<tr>");
-                        writer.println("\t\t<td>" +
-                                "<a href = \""+dirContent[i-1]+"\">"+dirContent[i-1].getName()+"</a></td>");
-                        writer.println("\t\t<td></td>");
-                        writer.println("\t\t</tr>");
-                    }else{
-                        writer.println("\t\t<tr>");
-                        writer.println("\t\t<td>" +
-                                "<a href = \""+dirContent[i-1]+"\">"+dirContent[i-1].getName()+"</a></td>");
-                        writer.println("\t\t<td>"+dirContent[i-1].getUsableSpace()+"</td>");
-                        writer.println("\t\t</tr>");
-                    }
-                }
-*/
+
                 for (int i=0; i<arrayOfDirs.size();i++){
                     writer.println("\t\t<tr>");
                     writer.println("\t\t<td>" +
-                            "<a href = '"+arrayOfDirs.get(i).getName()+"/index.html'>"+arrayOfDirs.get(i).getName()+"</a></td>");
+                           "<a href = '"+arrayOfDirs.get(i).getName()+"/index.html'>"+arrayOfDirs.get(i).getName()+"</a></td>");
+        //                      4 recor vertion
+        //                    "<a href = '"+arrayOfDirs.get(i).getName()+"'>"+arrayOfDirs.get(i).getName()+"</a></td>");
                     writer.println("\t\t<td></td>");
                     writer.println("\t\t</tr>");
                 }
