@@ -16,25 +16,20 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String dirName = ".";
         String outFileName = "index.html";
-        Integer port=8080;
-        try{
-            if (args.length>0) {
-                dirName = args[0];
-                port = new Integer(args[1]);
+        int port=8080;
+
+        if (args.length>0) {
+            dirName = args[0];
+                   }
+        if (args.length>1) {
+            try {
+                port = Integer.parseInt(args[1]);
+            } catch (NumberFormatException e) {
+                System.out.println(""+e);
             }
-        }catch (ArrayIndexOutOfBoundsException e){
-            System.err.println("Wrong number of arguments. Program is terminated.");
-            System.exit(-1);
-        }catch (NumberFormatException e){
-            System.err.println("Wrong port. Program is terminated.");
-            System.exit(-1);
         }
 
         File directory = new File(dirName);
-
-
-
-
 
         ServerSocket server = new ServerSocket(port);
         while (true) {
