@@ -3,7 +3,7 @@ package com.sukhorukov.khudyakova.servertask;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,14 +34,10 @@ public class Main {
         ServerSocket server = new ServerSocket(port);
         while (true) {
             Socket s = server.accept();
-            System.out.println("Client accepted"+s.getInetAddress()+":"+s.getPort());
+            System.out.println("Client accepted : "+s.getInetAddress()+":"+s.getPort());
             ServerProcess sProc  = new ServerProcess(s,directory,outFileName);
             new Thread(sProc).start();
-//            directory = sProc.getCurrentDir();
+
         }
-
-
-
-
     }
 }
