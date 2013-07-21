@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52407fbc-8c94-44a7-b758-521162e4925c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activation-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_activation_activation_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/текст.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverTask.iml" afterPath="$PROJECT_DIR$/serverTask.iml" />
+      <change type="DELETED" beforePath="C:\Users\ТСД\IdeaProjects\serverTask\текст.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="serverTask.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374388432058" ignored="false" />
     <file path="/DirectoryContentWriter.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374408095034" ignored="false" />
-    <file path="/Dummy.txt" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374381852769" ignored="false" />
+    <file path="/Dummy.txt" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374408655925" ignored="false" />
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/MyInvocationHandler.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374239011592" ignored="false" />
     <file path="/MyInvocationHandler.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1373904374721" ignored="false" />
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/CommandFactory.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374238892366" ignored="false" />
@@ -575,7 +568,11 @@
       <created>1374257640835</created>
       <updated>1374257640835</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ver 6. Final version">
+      <created>1374408677272</created>
+      <updated>1374408677272</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -646,7 +643,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver 6. Final version" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -664,6 +661,7 @@
     <MESSAGE value="Ver 3. debug comments. work only text file getting" />
     <MESSAGE value="Ver 4" />
     <MESSAGE value="Ver 5" />
+    <MESSAGE value="Ver 6. Final version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
