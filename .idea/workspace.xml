@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52407fbc-8c94-44a7-b758-521162e4925c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activation-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_activation_activation_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/текст.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" afterPath="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverTask.iml" afterPath="$PROJECT_DIR$/serverTask.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="serverTask.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374046729495" ignored="false" />
-    <file path="/DirectoryContentWriter.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374042158484" ignored="false" />
-    <file path="/Dummy.txt" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374239166085" ignored="false" />
+    <file path="/Main.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374388432058" ignored="false" />
+    <file path="/DirectoryContentWriter.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374408095034" ignored="false" />
+    <file path="/Dummy.txt" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374381852769" ignored="false" />
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/MyInvocationHandler.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374239011592" ignored="false" />
     <file path="/MyInvocationHandler.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1373904374721" ignored="false" />
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/CommandFactory.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374238892366" ignored="false" />
@@ -43,9 +48,9 @@
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/StackCommand.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1373911676681" ignored="false" />
     <file path="/StackCommand.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1373911459486" ignored="false" />
     <file path="/Server.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1373960898686" ignored="false" />
-    <file path="/ServerProcess.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374257008713" ignored="false" />
+    <file path="/ServerProcess.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374407422056" ignored="false" />
     <file path="/Commands.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374038361571" ignored="false" />
-    <file path="/fragment.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374256454485" ignored="false" />
+    <file path="/fragment.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374334099488" ignored="false" />
     <file path="/CommentCommand.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374230836066" ignored="false" />
     <file path="$PROJECT_DIR$/../Calc/src/com/sukhorukov/khudyakova/task2/commandStackLength.properties" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374231610512" ignored="false" />
     <file path="/DefineCommand.java" changelist="52407fbc-8c94-44a7-b758-521162e4925c" time="1374230819573" ignored="false" />
@@ -80,7 +85,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -117,38 +121,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" line="59" class="com.sukhorukov.khudyakova.servertask.ServerProcess" package="com.sukhorukov.khudyakova.servertask">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" line="56" class="com.sukhorukov.khudyakova.servertask.ServerProcess" package="com.sukhorukov.khudyakova.servertask">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -161,16 +135,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="50" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerProcess.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.33333334">
+            <state line="33" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,20 +143,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForbiddenException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java">
+      <file leaf-file-name="ServerProcess.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="23" column="93" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testDir/aaa/bbb/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="11" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.2692308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectoryContentWriter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testDir/aaa/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="29" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForbiddenException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectoryContentWriter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="2" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="60" column="85" selection-start="2209" selection-end="2209" vertical-scroll-proportion="2.8895185">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,10 +214,11 @@
         <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Server.java" />
         <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Commands.java" />
         <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/GET.java" />
-        <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" />
         <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenExeption.java" />
+        <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java" />
         <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java" />
+        <option value="$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java" />
       </list>
     </option>
   </component>
@@ -266,6 +263,14 @@
               <option name="myItemId" value="serverTask" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.7 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -274,6 +279,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testDir" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testDir" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aaa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,26 +332,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activation-1.1.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverTask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activation-1.1.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="options.lastSelected" value="preferences.fileTypes" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Calc" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="Downloaded.Files.Path" value="C:\Users\ТСД\IdeaProjects\serverTask\lib" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -322,6 +402,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sukhorukov.khudyakova.servertask" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ТСД\IdeaProjects\serverTask" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -488,18 +571,23 @@
       <created>1374054430654</created>
       <updated>1374054430654</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ver 5">
+      <created>1374257640835</created>
+      <updated>1374257640835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3321976" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -508,13 +596,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6013629" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3321976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6678024" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3321976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -559,7 +646,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver 5" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -576,9 +663,22 @@
     <MESSAGE value="Ver 1" />
     <MESSAGE value="Ver 3. debug comments. work only text file getting" />
     <MESSAGE value="Ver 4" />
+    <MESSAGE value="Ver 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="serverTask" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="serverTask" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -587,31 +687,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="2" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="58" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="114" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,42 +706,54 @@
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="57" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="26" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="104" selection-start="2299" selection-end="2299" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,30 +762,55 @@
         <state line="281" column="22" selection-start="8066" selection-end="8066" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
+    <entry file="jar://$PROJECT_DIR$/lib/activation-1.1.1.jar!/META-INF/mimetypes.default">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="50" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="2" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="33" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ForbiddenException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="5" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/ServerProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.33333334">
+        <state line="23" column="93" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testDir/aaa/bbb/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testDir/aaa/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="71" selection-end="71" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sukhorukov/khudyakova/servertask/DirectoryContentWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="85" selection-start="2209" selection-end="2209" vertical-scroll-proportion="2.8895185">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -777,6 +893,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>javax.activation:activation:1.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

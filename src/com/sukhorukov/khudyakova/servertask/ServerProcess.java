@@ -4,19 +4,16 @@ import javax.activation.FileTypeMap;
 import javax.activation.MimetypesFileTypeMap;
 import java.io.*;
 import java.net.Socket;
+import java.net.URLDecoder;
 
 /**
- * Created with IntelliJ IDEA.
- * User: user
- * Date: 13.07.13
- * Time: 11:23
- * To change this template use File | Settings | File Templates.
+
  */
-public class ServerProcess implements Runnable{
-    private Socket socket;
-    private File directory;
-    private String outFileName;
-    private String encoding;
+class ServerProcess implements Runnable{
+    private final Socket socket;
+    private final File directory;
+    private final String indexFileName;
+    private final String encoding;
 
     private String fileType;
     private long fileSize;
@@ -24,11 +21,11 @@ public class ServerProcess implements Runnable{
     private ByteArrayOutputStream  byteArray;
 
 
-    public ServerProcess(Socket socket,File directory, String outFileName) throws IOException {
+    public ServerProcess(Socket socket,File directory, String indexFileName,String encoding) {
         this.socket = socket;
         this.directory = directory;
-        this.outFileName = outFileName;
-        this.encoding = "UTF-8";
+        this.indexFileName = indexFileName;
+        this.encoding = encoding;
 
         this.fileType = "";
         this.fileSize = 0;
@@ -41,21 +38,21 @@ public class ServerProcess implements Runnable{
         try(InputStream in = socket.getInputStream(); OutputStream out = socket.getOutputStream())
         {
             try{
+                String endOfRequest = "\r\n\r\n";
                 StringBuilder sb = new StringBuilder();
                 int c;
-                while((c =in.read())!=-1 && c!=10 && c!=13){       //reading the first line with command and its arguments
-                    sb.append((char)c);
+                while(!sb.toString().endsWith(endOfRequest)){       //reading full request
+                    c=in.read();
+                    sb.append((char) c);
                 }
-    //            while(in.read()!=-1){}          // reading until the end of input stream
+    //            System.out.println(sb.toString());
+
                 String data = sb.toString();
-                String args[] = data.split(" ");                // defining the command and arguments
-                String cmd = args[0].trim().toUpperCase();
-                String wantedPath = args[1];
+                String args[] = data.split(" ");
+                String cmd = args[0].trim().toUpperCase();      // defining the command
+                String wantedPath = URLDecoder.decode(args[1],encoding);        // defining the path
                 System.out.println("wanted Path = "+wantedPath);
-            //    String fileType = "";
-            //   long fileSize = 0;
-            //    File wantedFile = null;
-            //    ByteArrayOutputStream  byteArray = new ByteArrayOutputStream();
+
                 preparation4Reply(wantedPath);
                 switch (cmd){
                     case "GET":get(out);break;
@@ -80,31 +77,37 @@ public class ServerProcess implements Runnable{
 
     private void preparation4Reply(String wantedPath) throws IOException, ForbiddenException {
         File temp = new File(directory.getCanonicalPath()+File.separator+wantedPath);
-        String rootDirCanonPath = directory.getCanonicalPath();
-        String tempCanonPath = temp.getCanonicalPath();
-        if (tempCanonPath.startsWith(rootDirCanonPath)){
-            if (temp.isDirectory()){
-                File index = new File(temp, outFileName);
-                if (index.canRead()){
-                    wantedFile = new File(temp.getPath()+File.separator+outFileName);
-                    fileSize = wantedFile.length();
-                    fileType = "text";
+        System.out.println(temp.getCanonicalPath());
+        if (!temp.canRead()){
+            throw new FileNotFoundException();
+        }else{
+            String rootDirCanonPath = directory.getCanonicalPath();
+            String tempCanonPath = temp.getCanonicalPath();
+            if (tempCanonPath.startsWith(rootDirCanonPath)){
+                if (temp.isDirectory()){
+                    File index = new File(temp, indexFileName);
+                    if (index.canRead()){
+                        wantedFile = new File(temp.getPath()+File.separator+ indexFileName);
+                        fileSize = wantedFile.length();
+                        fileType = "text/html";
+                    }else{
+                        DirectoryContentWriter.createDirHTML(byteArray,
+                                new File(temp.getPath()),encoding);
+                        fileSize = byteArray.size();
+                        fileType = "text/html";
+                    }
                 }else{
-                    DirectoryContentWriter.createDirHTML(byteArray,
-                            new File(temp.getPath()),outFileName);
-                    fileSize = byteArray.size();
-                    fileType = "text/html";
+                    wantedFile = temp;
+                    fileSize = wantedFile.length();
+                    FileTypeMap fileTypeMap = new MimetypesFileTypeMap();
+                    fileType = fileTypeMap.getContentType(wantedFile);
+                //    System.out.println(fileType);
+
                 }
             }else{
-                wantedFile = temp;
-                fileSize = wantedFile.length();
-                FileTypeMap fileTypeMap = new MimetypesFileTypeMap();
-                fileType = fileTypeMap.getContentType(wantedFile);
+                throw new ForbiddenException();
             }
-        }else{
-            throw new ForbiddenException();
         }
-
 
     }
 
@@ -122,20 +125,20 @@ public class ServerProcess implements Runnable{
         }else{
             byteArray.writeTo(out);
         }
-
+        out.flush();
     }
 
     private void head(OutputStream out) throws IOException {
 
         out.write("HTTP/1.0 200 OK\r\n".getBytes());
-        out.write(("Content-Type: "+fileType+"; charset="+encoding+"\r\n").getBytes());
+        out.write(("Content-Type: " +fileType+"; charset="+encoding+"\r\n").getBytes());
         out.write(("Content-Length: " +fileSize+ "\r\n").getBytes());
         out.write("\r\n".getBytes());
         out.flush();
     }
     private void returnError(OutputStream out, int errorCode, String errorString)throws IOException {
 
-        out.write(("HTTP/1.0 "+errorCode+" "+errorString+"\r\n").getBytes());
+        out.write(("HTTP/1.1 "+errorCode+" "+errorString+"\r\n").getBytes());
         out.write(("Content-Type: text/html; charset="+encoding+"\r\n").getBytes());
         out.write("\r\n".getBytes());
         out.flush();

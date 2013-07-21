@@ -6,17 +6,15 @@ import java.net.Socket;
 
 
 /**
- * Created with IntelliJ IDEA.
- * User: ТСД
- * Date: 12.07.13
- * Time: 22:50
- * To change this template use File | Settings | File Templates.
+
  */
 public class Main {
     public static void main(String[] args) throws IOException {
         String dirName = ".";
-        String outFileName = "index.html";
+        String indexFileName = "index.html";
         int port=8080;
+        String encoding = "UTF-8";
+        System.setProperty("file.encoding",encoding);
 
         if (args.length>0) {
             dirName = args[0];
@@ -29,13 +27,14 @@ public class Main {
             }
         }
 
+
         File directory = new File(dirName);
 
         ServerSocket server = new ServerSocket(port);
         while (true) {
             Socket s = server.accept();
             System.out.println("Client accepted : "+s.getInetAddress()+":"+s.getPort());
-            ServerProcess sProc  = new ServerProcess(s,directory,outFileName);
+            ServerProcess sProc  = new ServerProcess(s,directory,indexFileName,encoding);
             new Thread(sProc).start();
 
         }

@@ -4,13 +4,9 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: ТСД
- * Date: 13.07.13
- * Time: 0:06
- * To change this template use File | Settings | File Templates.
+
  */
-public class DirectoryContentWriter {
+class DirectoryContentWriter {
 /*    public static void processDirs(File directory,String htmlFileName) throws IOException {
         if(!directory.isDirectory()){
             return;
@@ -23,59 +19,61 @@ public class DirectoryContentWriter {
 
     }
 */
-    public static void createDirHTML(ByteArrayOutputStream byteArray,File directory,String htmlFileName) throws IOException {
+    public static void createDirHTML(ByteArrayOutputStream byteArray,File directory,String encoding)  {
         if(directory.isDirectory()){
             File[] dirContent = directory.listFiles();
-            int numberOfFiles = dirContent.length;
+
+
             List<File> arrayOfFiles = new ArrayList<>();
             List<File> arrayOfDirs = new ArrayList<>();
-            for (int i=0;i<numberOfFiles;i++){
-                if (dirContent[i].isDirectory()){
-                    arrayOfDirs.add(dirContent[i]);
-                }else{
-                    arrayOfFiles.add(dirContent[i]);
+            for (File aDirContent : dirContent) {
+                if (aDirContent.isDirectory()) {
+                    arrayOfDirs.add(aDirContent);
+                } else {
+                    arrayOfFiles.add(aDirContent);
                 }
             }
             Collections.sort(arrayOfFiles);
             Collections.sort(arrayOfDirs);
        //     try (OutputStream out = new FileOutputStream(directory.getAbsolutePath()+File.separator+htmlFileName)){
 
-                PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(byteArray)) );
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(byteArray)) );
 
-                writer.println("<html>");
-                writer.println("<head>");
-                writer.println("<title>"+directory.getName()+"</title>");
-                writer.println("</head>");
-                writer.println("<body>");
-                writer.println("\t<table cellpadding=10>");
-                writer.println("\t\t<tr>");
-                writer.println("\t\t<td>NAME</td>");
-                writer.println("\t\t<td>SIZE</td>");
-                writer.println("\t\t</tr>");
+            writer.println("<html>");
+            writer.println("<head>");
+            writer.println("<meta charset="+encoding+">");
+            writer.println("<title>"+directory.getName()+"</title>");
+            writer.println("</head>");
+            writer.println("<body>");
+            writer.println("\t<table cellpadding=10>");
+            writer.println("\t\t<tr>");
+            writer.println("\t\t<td>NAME</td>");
+            writer.println("\t\t<td>SIZE</td>");
+            writer.println("\t\t</tr>");
+            writer.println("\t\t<tr>");
+            writer.println("\t\t<td>" +
+    //                "<a href = '../index.html'>..</a></td>");     // 4 recur version
+                    "<a href = '../'>..</a></td>");
+            writer.println("\t\t<td></td>");
+            writer.println("\t\t</tr>");
+
+
+            for (File aDir : arrayOfDirs) {
                 writer.println("\t\t<tr>");
                 writer.println("\t\t<td>" +
-        //                "<a href = '../index.html'>..</a></td>");     // 4 recur vertion
-                        "<a href = '../'>..</a></td>");
+                        //                   "<a href = './"+arrayOfDirs.get(i).getName()+"/index.html'>"+arrayOfDirs.get(i).getName()+"</a></td>");
+                        //                      4 recur version
+                        "<a href = '" + aDir.getName() + "/'>" + aDir.getName() + "</a></td>");
                 writer.println("\t\t<td></td>");
                 writer.println("\t\t</tr>");
-
-
-                for (int i=0; i<arrayOfDirs.size();i++){
-                    writer.println("\t\t<tr>");
-                    writer.println("\t\t<td>" +
-        //                   "<a href = './"+arrayOfDirs.get(i).getName()+"/index.html'>"+arrayOfDirs.get(i).getName()+"</a></td>");
-        //                      4 recor vertion
-                            "<a href = '"+arrayOfDirs.get(i).getName()+"/'>"+arrayOfDirs.get(i).getName()+"</a></td>");
-                    writer.println("\t\t<td></td>");
-                    writer.println("\t\t</tr>");
-                }
-                for (int i=0; i<arrayOfFiles.size();i++){
-                    writer.println("\t\t<tr>");
-                    writer.println("\t\t<td>" +
-                            "<a href = \""+arrayOfFiles.get(i).getName()+"\">"+arrayOfFiles.get(i).getName()+"</a></td>");
-                    writer.println("\t\t<td>"+arrayOfFiles.get(i).length()+"</td>");
-                    writer.println("\t\t</tr>");
-                }
+            }
+            for (File aFile : arrayOfFiles) {
+                writer.println("\t\t<tr>");
+                writer.println("\t\t<td>" +
+                        "<a href = \"" + aFile.getName() + "\">" + aFile.getName() + "</a></td>");
+                writer.println("\t\t<td>" + aFile.length() + "</td>");
+                writer.println("\t\t</tr>");
+            }
                 writer.println("\t</table>");
                 writer.println("</body>");
                 writer.println("</html>");
