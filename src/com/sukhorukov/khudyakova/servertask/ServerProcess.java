@@ -38,7 +38,7 @@ class ServerProcess implements Runnable{
         try(InputStream in = socket.getInputStream(); OutputStream out = socket.getOutputStream())
         {
             try{
-                String endOfRequest = "\r\n\r\n";
+                /*String endOfRequest = "\r\n\r\n";
                 StringBuilder sb = new StringBuilder();
                 int c;
                 while(!sb.toString().endsWith(endOfRequest)){       //reading full request
@@ -48,6 +48,14 @@ class ServerProcess implements Runnable{
     //            System.out.println(sb.toString());
 
                 String data = sb.toString();
+                */
+                BufferedReader br = new BufferedReader(new InputStreamReader(in));
+                String data = br.readLine();
+                System.out.println(data);
+                byte[] tmp = new byte[4096];
+                int c;
+                while (in.available()>0&&(in.read(tmp,0,in.available()))>0){}
+
                 String args[] = data.split(" ");
                 String cmd = args[0].trim().toUpperCase();      // defining the command
                 String wantedPath = URLDecoder.decode(args[1],encoding);        // defining the path
@@ -66,7 +74,7 @@ class ServerProcess implements Runnable{
                 returnError(out,403,"Forbidden");
                 e.printStackTrace();
             }catch (Exception e){
-                returnError(out,500,"Internal Server Error");
+                returnError(out, 500, "Internal Server Error");
                 e.printStackTrace();
             }
 
